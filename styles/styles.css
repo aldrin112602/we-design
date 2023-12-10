@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav a {
+  color: #666;
+  font-weight: bold;
+}
+
+nav {
+  padding: 20px;
+  background-color: rgb(243, 232, 219);
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+nav div.d-2 {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav div.d-flex img {
+  width: 50px;
+}
+
+nav .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.3rem;
+  width: 70%;
+}
+.toggler {
+  display: none;
+  font-size: large;
+  cursor: pointer;
+  background: linear-gradient(45deg, rgb(156, 19, 156), rgb(236, 217, 217));
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 5px;
+}
+
+nav div.d-2 button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, rgb(156, 19, 156), rgb(236, 217, 217));
+  font-weight: bold;
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  background-color: rgb(243, 232, 219);
+  width: 300px;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  padding: 30px;
+  box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.4);
+  gap: 20px;
+  display: none;
+}
+
+.side-bar a:hover {
+  font-weight: bold;
+}
+
+.side-bar img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  background-color: #f0f0f0;
+}
+
+main div.d-1 {
+  width: 70%;
+  border-right: 1px solid rgb(199, 191, 191);
+  height: 100%;
+  padding: 30px;
+}
+
+main div.d-2 {
+  width: 30%;
+  height: 100%;
+  padding: 30px;
+}
+
+main div.d-1 .row {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 10px;
+  gap: 10px;
+}
+
+
+main div.d-2 .row {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main div.d-2 .row .col {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgb(241, 222, 241);
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 60px;
+}
+
+main div.d-2 .row .col:hover {
+  background-color: rgb(240, 220, 240);
+  border: 1px solid rgb(231, 152, 231);
+}
+
+@media (max-width: 1264px) {
+  main div.d-1 .row {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  main div.d-2 .row .col {
+    width: 100%;
+  }
+}
+
+
+
+main div.d-1 .row .col {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  border-radius: 40px;
+  padding: 30px;
+  border: 1px solid rgb(241, 222, 241);
+}
+
+main div.d-1 .row .col:hover {
+  background-color: rgb(240, 220, 240);
+  border: 1px solid rgb(231, 152, 231);
+}
+
+main div.d-1 .row .col button {
+  padding: 10px 15px;
+  display: block;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, rgb(156, 19, 156), rgb(236, 217, 217));
+  color: #fff;
+}
+main div.d-2 .row .col {
+  justify-content: center;
+  align-items: center;
+}
+main div.d-2 .row .col button {
+  font-size: 1.2rem;
+  color: rgb(231, 130, 231);
+}
+
+
+
+@media (max-width: 904px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav div.d-flex {
+    display: none;
+  }
+
+  nav div.d-2 {
+    width: 300px;
+    justify-content: end;
+  }
+
+  .toggler {
+    display: block;
+  }
+
+  .side-bar {
+    display: block;
+  }
+
+  .side-bar a {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  
+}
+@media (max-width: 905px) {
+    main {
+    display: block;
+  }
+
+  main div.d-1 {
+    width: 100%;
+  }
+
+  main div.d-2 {
+    width: 100%;
+  }
+}
